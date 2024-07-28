@@ -1,0 +1,90 @@
+@font-face {
+	font-family: "Faqs";
+	src: url('./assets/fonts/WorkSans-Italic-VariableFont_wght.ttf');
+}
+
+.container {
+	font-family: "Faqs";
+	background-color: beige;
+	height: 1000px;
+	width: 100%;
+	position: relative;
+	font-size: 16px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.Faqs {
+	position: absolute;
+	top: 200px;
+	left: 300px;
+	background-color: white;
+	z-index: 1;
+	height: auto;
+	width: 40%;
+	border-radius: 20px;
+	padding: 20px 40px;
+}
+
+.Faqs .faqs_header {
+	display: flex;
+	align-items: center;
+	margin: 10px 0px;
+}
+
+.Faqs .faqs_header .header {
+	margin-left: 20px;
+	font-size: 2.5em;
+}
+
+.Faqs .each_faq {
+	border-bottom: 1px solid lightgray;
+	margin-top: 15px;
+	padding-bottom: 10px;
+}
+
+.Faqs .each_faq .faq_qestion {
+	display: flex;
+	align-items: center;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
+}
+
+.Faqs .each_faq .faq_qestion .question {
+	font-size: 1.2em;
+	font-weight: 600;
+}
+
+.Faqs .each_faq .faq_qestion .icons .minus {
+	display: none;
+}
+
+
+.Faqs .each_faq .faq_answer {
+	max-height: 0px;
+	overflow: hidden;
+	color: gray;
+	transition: max-height 1.4s ease;
+
+}
+
+.Faqs .each_faq.active .faq_answer {
+	max-height: 300px;
+}
+
+.Faqs .each_faq.active .faq_qestion .icons .minus {
+	display: block;
+}
+
+.Faqs .each_faq.active .faq_qestion .icons .plus {
+	display: none;
+}
+
+.Faqs .each_faq.active .faq_qestion .question {
+	color: blueviolet;
+	transition: color 1.4 ease;
+}
